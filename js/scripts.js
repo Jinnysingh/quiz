@@ -1,20 +1,16 @@
-function selectedoptions(event) {
-    let parentId = event.target.parentElement.id
-    let value = event.target.parentElement
-    localStorage.setItem(parentId, value);
-}
-var showing = [1, 0, 0, 0, 0];
-var questions = ['q0', 'q1', 'q2', 'q3', 'q4'];
+
+let showing = [1, 0, 0, 0, 0];
+let questions = ['q0', 'q1', 'q2', 'q3', 'q4'];
 
 function next() {
-    var qElems = [];
-    var results = [];
+    let qElems = [];
+    let results = [];
 
-    var q0 = document.forms["quizForm"]["q1"].value;
-    var q1 = document.forms["quizForm"]["q2"].value;
-    var q2 = document.forms["quizForm"]["q3"].value;
-    var q3 = document.forms["quizForm"]["q4"].value;
-    var q4 = document.forms["quizForm"]["q5"].value;
+    let q0 = document.forms["quizForm"]["q1"].value;
+    let q1 = document.forms["quizForm"]["q2"].value;
+    let q2 = document.forms["quizForm"]["q3"].value;
+    let q3 = document.forms["quizForm"]["q4"].value;
+    let q4 = document.forms["quizForm"]["q5"].value;
 
     document.getElementById('prev-btn').disabled = false
     for (var i = 0; i < questions.length; i++) {
@@ -43,9 +39,8 @@ function next() {
 }
 
 
-
 function previous() {
-    var qElems = [];
+    let qElems = [];
     for (var i = 0; i < questions.length; i++) {
         qElems.push(document.getElementById(questions[i]));
     }
