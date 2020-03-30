@@ -4,6 +4,10 @@ body{
 	font-family: 'Arial', sans-serif;
 	font-size: 14px;
 }
+input[type="radio" i]{
+	cursor: pointer;
+}
+
 
 #container{
 	width:50%;
@@ -53,7 +57,13 @@ button{
 	cursor: pointer;
 	text-align: center;
 	border-radius: 4px;
+	
 }
+
+button:disabled{
+	 pointer-events: none !important;
+}
+
 
 #results 
 h3{

@@ -8,7 +8,7 @@
     <script src="./js/scripts.js"> </script>
 </head>
 
-<body>
+<body onload="getQuizData()">
     <div id="container">
         <header>
             <h1> Simple JavaScript Quiz</h1>
@@ -17,7 +17,7 @@
         <section>
             <div id="results"> </div>
             <form name="quizForm">
-                <div id="questions">
+                <div id="questions" onchange="selectedOptions(event)">
                     <div id="q0">
                         <h2>1. In which elements do we put in JavaScript code?</h2>
                         <input type="radio" name="q1" value="a" id="q1a">a. &lt;js&gt;<br>
@@ -58,8 +58,8 @@
                 </div>
             </form>
             <div class="footer-buttons">
-                <button id="prev-btn" onclick="previous()" disabled> Previous</button>
-                <button id="next-btn" onclick="next()" style="margin-left: 20px;">Next</buttom>
+                <button id="prev-btn" onclick="previous()" > Previous</button>
+                <button id="next-btn" onclick="next()" style="margin-left: 20px;" disabled>Next</buttom>
             </div>
 
 
